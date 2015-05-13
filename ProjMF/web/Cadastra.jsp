@@ -8,20 +8,17 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <!-- must be the three first things -->
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
         <title>MultiForm | Cadastro</title>
 
-        <!-- Bootstrap core CSS -->
         <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Custom styles for this template -->
         <link href="jumbotron.css" rel="stylesheet">
 
-        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="assets/js/ie-emulation-modes-warning.js"></script>
 
@@ -59,13 +56,12 @@
 
         </nav>
 
-        <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">
                 <div style="margin:0 auto;">
                 <h1>MultiForm</h1>
                 </div>
-                <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+                <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">more &raquo;</a></p>-->
             </div>
         </div>
 
@@ -148,27 +144,71 @@
                             <div class="col-sm-12">
                                 <div class="input-group col-sm-3">
                                     <span class="input-group-addon" id="basic-addon8">Nome do pai</span>
-                                    <input type="text" class="form-control" id="nome-pai" aria-describedby="basic-addon8" >
+                                    <input id="nome-pai" name="nome-pai" type="text" class="form-control"  aria-describedby="basic-addon8" >
                                 </div>
                             </div>
                         </div>
-                        <!--<input type="text" class="form-control" placeholder="Nome do pai">
-                        <input type="text" class="form-control" placeholder="Cor de pele"><br /><br />
-                        <input type="text" class="form-control" placeholder="Data de nascimento">
-                        <input type="text" class="form-control" placeholder="UF de origem"><br /><br />
-                        <input type="text" class="form-control" placeholder="Naturalidade">
-                        <input type="text" class="form-control" placeholder="Logradouro"><br /><br />
-                        <input type="text" class="form-control" placeholder="Número">	
-                        <input type="text" class="form-control" placeholder="Complemento"><br /><br />-->	
+                        <div class="form-group">
+                            <label for="Cor de pele" class="col-sm-2 control-label"></label>
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-3">
+                                    <span class="input-group-addon" id="basic-addon8">Cor de pele</span>
+                                    <input id="cor-pele" name="cor-pele" type="text" class="form-control"  aria-describedby="basic-addon9" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Data de nascimento" class="col-sm-2 control-label"></label>
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-3">
+                                    <span class="input-group-addon" id="basic-addon8">Data de nascimento</span>
+                                    <input id="data-nascimento" name="cor-pele" type="text" class="form-control"  aria-describedby="basic-addon10" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="UF de origem" class="col-sm-2 control-label"></label>
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-3">
+                                    <span class="input-group-addon" id="basic-addon8">UF de origem</span>
+                                    <input id="uf-origem" name="uf-origem" type="text" class="form-control"  aria-describedby="basic-addon11" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Naturalidade" class="col-sm-2 control-label"></label>
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-3">
+                                    <span class="input-group-addon" id="basic-addon8">Naturalidade</span>
+                                    <input id="naturalidade" name="naturalidade" type="text" class="form-control"  aria-describedby="basic-addon12" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Logradouro" class="col-sm-2 control-label"></label>
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-3">
+                                    <span class="input-group-addon" id="basic-addon8">Número</span>
+                                    <input id="numero" name="numero" type="text" class="form-control"  aria-describedby="basic-addon13" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Logradouro" class="col-sm-2 control-label"></label>
+                            <div class="col-sm-12">
+                                <div class="input-group col-sm-3">
+                                    <span class="input-group-addon" id="basic-addon8">Complemento</span>
+                                    <input id="complemento" name="complemento" type="text" class="form-control"  aria-describedby="basic-addon14" >
+                                </div>
+                            </div>
+                        </div>
+	
                         <input type="submit" value="Cadastrar" class="btn btn-primary"> 
                         <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                     </form>
                 </div> 
             </div>
-
-
             <!--<hr>-->
-
             <footer>
                 <p>&copy; MultiForm 2015 </p>
             </footer>
