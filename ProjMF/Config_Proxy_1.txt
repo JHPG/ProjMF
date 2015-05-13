@@ -1,0 +1,4 @@
+
+
+Na tela de clonar -> configuração do proxy -> Utilizar definições do sistema
+
