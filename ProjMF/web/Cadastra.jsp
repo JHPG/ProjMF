@@ -14,13 +14,13 @@
         <link rel="icon" href="../../favicon.ico">
 
         <title>MultiForm | Cadastro</title>
-
         <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-
         <link href="jumbotron.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
 
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="assets/js/ie-emulation-modes-warning.js"></script>
+        
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -70,142 +70,146 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Informações Pessoais</div>
                 <div class="panel-body">
-
+                
                     <form class="form-horizontal" role="form" style="">
-                        <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Nome" class="col-sm-1 control-label" title="Nome" style=""></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
 
-                            <label for="Nome" class="col-sm-1 control-label" title="Nome" style=""></label>
+                                            <span class="input-group-addon" id="basic-addon1">Nome</span>
 
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-
-                                    <span class="input-group-addon" id="basic-addon1">Nome</span>
-
-                                    <input id="nome" name="nome" type="text" class="form-control" aria-describedby="basic-addon1" />
+                                            <input id="nome" name="nome" type="text" class="form-control" aria-describedby="basic-addon1" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="CPF" class="col-sm-1 control-label" title="CPF"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon2">CPF</span>
+                                            <input id="CPF" name="CPF" type="text" class="form-control" aria-describedby="basic-addon2" />
+                                        </div>    
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="CNPJ" class="col-sm-1 control-label" title="CNPJ"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon3">CNPJ</span>
+                                            <input id="CNPJ" name="CNPJ" type="text" class="form-control" aria-describedby="basic-addon3" />
+                                        </div>
+                                    </div>   
+                                </div>
+                                <div class="form-group">
+                                    <label for="RG" class="col-sm-1 control-label"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon4">RG</span>
+                                            <input  id="RG" name="RG" type="text" class="form-control" aria-describedby="basic-addon4" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Genero" class="col-sm-1 control-label"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon5">Genero</span>
+                                            <input id="Genero" name="genero" type="text" class="form-control" aria-describedby="basic-addon5" >
+                                        </div>
+                                    </div>
+                                </div>   
+                                <div class="form-group">
+                                    <label for="Estado Civil" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon6">Estado Civil</span>
+                                            <input id="estado-Civil" name="estado-civil" type="text" name="estado_civil" class="form-control"  aria-describedby="basic-addon6">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Nome da mãe" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="sizing-addon7">Nome da mãe</span>
+                                            <input id="nome-Mae" name="nome-mae" type="text" class="form-control" aria-describedby="basic-addon7" >
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="CPF" class="col-sm-1 control-label" title="CPF"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon2">CPF</span>
-                                    <input id="CPF" name="CPF" type="text" class="form-control" aria-describedby="basic-addon2" />
-                                </div>    
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="CNPJ" class="col-sm-1 control-label" title="CNPJ"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon3">CNPJ</span>
-                                    <input id="CNPJ" name="CNPJ" type="text" class="form-control" aria-describedby="basic-addon3" />
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Nome do pai" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon8">Nome do pai</span>
+                                            <input id="nome-pai" name="nome-pai" type="text" class="form-control"  aria-describedby="basic-addon8" >
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>   
-                        </div>
-                        <div class="form-group">
-                            <label for="RG" class="col-sm-1 control-label"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon4">RG</span>
-                                    <input  id="RG" name="RG" type="text" class="form-control" aria-describedby="basic-addon4" >
+                                <div class="form-group">
+                                    <label for="Cor de pele" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon8">Cor de pele</span>
+                                            <input id="cor-pele" name="cor-pele" type="text" class="form-control"  aria-describedby="basic-addon9" >
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Genero" class="col-sm-1 control-label"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon5">Genero</span>
-                                    <input id="Genero" name="genero" type="text" class="form-control" aria-describedby="basic-addon5" >
+                                <div class="form-group">
+                                    <label for="Data de nascimento" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon8">Data de nascimento</span>
+                                            <input id="data-nascimento" name="cor-pele" type="text" class="form-control"  aria-describedby="basic-addon10" >
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>   
-                        <div class="form-group">
-                            <label for="Estado Civil" class="col-sm-2 control-label"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon6">Estado Civil</span>
-                                    <input id="estado-Civil" name="estado-civil" type="text" name="estado_civil" class="form-control"  aria-describedby="basic-addon6">
+                                <div class="form-group">
+                                    <label for="UF de origem" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon8">UF de origem</span>
+                                            <input id="uf-origem" name="uf-origem" type="text" class="form-control"  aria-describedby="basic-addon11" >
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Nome da mãe" class="col-sm-2 control-label"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="sizing-addon7">Nome da mãe</span>
-                                    <input id="nome-Mae" name="nome-mae" type="text" class="form-control" aria-describedby="basic-addon7" >
+                                <div class="form-group">
+                                    <label for="Naturalidade" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon8">Naturalidade</span>
+                                            <input id="naturalidade" name="naturalidade" type="text" class="form-control"  aria-describedby="basic-addon12" >
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Nome do pai" class="col-sm-2 control-label"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon8">Nome do pai</span>
-                                    <input id="nome-pai" name="nome-pai" type="text" class="form-control"  aria-describedby="basic-addon8" >
+                                <div class="form-group">
+                                    <label for="Logradouro" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon8">Número</span>
+                                            <input id="numero" name="numero" type="text" class="form-control"  aria-describedby="basic-addon13" >
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Cor de pele" class="col-sm-2 control-label"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon8">Cor de pele</span>
-                                    <input id="cor-pele" name="cor-pele" type="text" class="form-control"  aria-describedby="basic-addon9" >
+                                <div class="form-group">
+                                    <label for="Logradouro" class="col-sm-2 control-label"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-3">
+                                            <span class="input-group-addon" id="basic-addon8">Complemento</span>
+                                            <input id="complemento" name="complemento" type="text" class="form-control"  aria-describedby="basic-addon14" >
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <input type="submit" value="Cadastrar" class="btn btn-primary" style="margin-left: 3%"> 
+                            <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                         </div>
-                        <div class="form-group">
-                            <label for="Data de nascimento" class="col-sm-2 control-label"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon8">Data de nascimento</span>
-                                    <input id="data-nascimento" name="cor-pele" type="text" class="form-control"  aria-describedby="basic-addon10" >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="UF de origem" class="col-sm-2 control-label"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon8">UF de origem</span>
-                                    <input id="uf-origem" name="uf-origem" type="text" class="form-control"  aria-describedby="basic-addon11" >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Naturalidade" class="col-sm-2 control-label"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon8">Naturalidade</span>
-                                    <input id="naturalidade" name="naturalidade" type="text" class="form-control"  aria-describedby="basic-addon12" >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Logradouro" class="col-sm-2 control-label"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon8">Número</span>
-                                    <input id="numero" name="numero" type="text" class="form-control"  aria-describedby="basic-addon13" >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="Logradouro" class="col-sm-2 control-label"></label>
-                            <div class="col-sm-12">
-                                <div class="input-group col-sm-3">
-                                    <span class="input-group-addon" id="basic-addon8">Complemento</span>
-                                    <input id="complemento" name="complemento" type="text" class="form-control"  aria-describedby="basic-addon14" >
-                                </div>
-                            </div>
-                        </div>
-	
-                        <input type="submit" value="Cadastrar" class="btn btn-primary"> 
-                        <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                     </form>
+                </div
                 </div> 
             </div>
             <!--<hr>-->
