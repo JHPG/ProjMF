@@ -43,7 +43,7 @@
                     <a class="navbar-brand" href="#">MultiForm</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <form class="navbar-form navbar-right">
+                  <!-- <form class="navbar-form navbar-right">
                         <div class="form-group">
                             <input type="text" placeholder="Usuario" class="form-control">
                         </div>
@@ -51,9 +51,9 @@
                             <input type="password" placeholder="Senha" class="form-control">
                         </div>
                         <button type="submit" class="btn btn-success">Entrar</button>
-                    </form>
+                    </form> -->
+                  <h4 class="navbar-form navbar-right" style="color:#eee">Bem vindo usuário</h4>
                 </div><!--/.navbar-collapse -->
-
         </nav>
 
         <div class="jumbotron">
