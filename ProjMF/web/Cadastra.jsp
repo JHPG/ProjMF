@@ -205,9 +205,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="submit" value="Cadastrar" class="btn btn-primary" style="margin-left: 3%"> 
-                            <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                         </div>
+                        <center style="margin:5% auto">
+                            <input type="submit" value="Cadastrar" class="btn btn-primary"> 
+                            <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
+                        </center>
                     </form>
                 </div
                 </div> 
