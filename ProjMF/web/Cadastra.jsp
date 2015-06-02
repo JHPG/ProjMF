@@ -78,7 +78,7 @@
                 <div class="panel-heading">Informações Pessoais</div>
                 <div class="panel-body">
                 <!--Opcional: adicionar restricao apenas letras e numero-->    
-                    <form class="form-horizontal" role="form" style="" method="POST" action="a">
+                    <form class="form-horizontal" role="form" style="" method="POST" action="FrontController">
                         <div class="row">
                             
                             <div class="col-md-6">
@@ -216,7 +216,7 @@
                         </div>
                         <center style="margin:5% auto">
                             <input type="hidden" name="acao" value="criarPaciente" class="btn btn-primary"> 
-                            <input type="submit" name="envio" value="Enviar" class="btn btn-primary" onclick="sucesso()"> 
+                            <input type="submit" class="btn btn-primary" onclick="sucesso()"> 
                             <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                         </center>
                     </form>
@@ -229,7 +229,7 @@
             </footer>
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="dist/js/jquery.min.js"></script>
         <script src="dist/js/bootstrap.min.js"></script>
         <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
         <!--reference: http://jsfiddle.net/zb4dc/2/-->
