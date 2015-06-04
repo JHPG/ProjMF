@@ -53,5 +53,43 @@ public class PacienteDAO extends DAO {
 
 
     }
+    
+    public List<Paciente> listaPacientes() {
+
+     try {
+
+         List<Paciente> pacientes = new ArrayList<Paciente>();
+
+         String sql = "(Select * From paciente)";
+         PreparedStatement stmt;
+         stmt = conexao.prepareStatement(sql);
+         
+         ResultSet rs = stmt.executeQuery();
+
+         while (rs.next()) {
+
+             Paciente pac = new Paciente();
+             pac.setIdPaciente(rs.getInt("idPaciente"));
+             pac.setNome(rs.getString("nome"));
+             pac.setCPF(rs.getString("CPF"));
+             
+             pacientes.add(pac);
+
+         }
+
+         rs.close();
+
+         stmt.close();
+
+         return pacientes;
+
+     } catch (SQLException e) {
+
+         throw new RuntimeException(e);
+
+     }
+
+ }
+    
 
 }
