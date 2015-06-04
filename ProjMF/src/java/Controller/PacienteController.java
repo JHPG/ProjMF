@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,9 +29,11 @@ public class PacienteController extends HttpServlet implements Command{
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
+        
+        //HttpSession sessao = request.getSession(true);
                 
         //int idPaciente = Integer.parseInt(request.getParameter("idPaciente"));
-        //int idPaciente = 1;
+        //int idPaciente = 0;
         String nome = request.getParameter("nome");
         String CPF =(request.getParameter("CPF"));
         String CNPJ = (request.getParameter("CNPJ"));
@@ -54,16 +54,17 @@ public class PacienteController extends HttpServlet implements Command{
 	PacienteDAO dao = new PacienteDAO();	
 
                 try {
-                    //dao.criarPedido(idPedido, clienteCPF, endereco, valorTotal);
+ 
                     dao.criaPaciente(pedido);    //Cria o pedido
                 } catch (SQLException ex) {
                     System.out.println(ex);
                 }
                 
-
+        RequestDispatcher rd = request.getRequestDispatcher("/index.html");  
+        rd.forward(request,response); 
         //session.setAttribute("flag",true);
         
-        response.sendRedirect("index.html");
+        //response.sendRedirect("index.html");
                 
         }
 
