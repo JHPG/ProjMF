@@ -1,11 +1,8 @@
 <%-- 
 --%>
-
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,9 +70,9 @@
         </div>
 
         <div class="container">
-            <h2>Cadastro</h2>
+            <h2>Cadastro Paciente</h2>
             <div class="panel panel-default">
-                <div class="panel-heading">Informações Pessoais</div>
+                <div class="panel-heading">Cadastro</div>
                 <div class="panel-body">
                 <!--Opcional: adicionar restricao apenas letras e numero-->    
                     <form class="form-horizontal" role="form" style="" method="POST" action="FrontController">
