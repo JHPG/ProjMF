@@ -30,8 +30,7 @@ public class PacienteController extends HttpServlet implements Command{
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
         
-        //HttpSession sessao = request.getSession(true);
-                
+        //HttpSession sessao = request.getSession(true);        
         //int idPaciente = Integer.parseInt(request.getParameter("idPaciente"));
         //int idPaciente = 0;
         String nome = request.getParameter("nome");
@@ -50,12 +49,11 @@ public class PacienteController extends HttpServlet implements Command{
         String complemento = (request.getParameter("complemento"));
         
         
-        Paciente pedido = new Paciente(nome, CPF, CNPJ, RG, genero, estado_civil, nome_mae, nome_pai, cor_pele, data_nascimento, UF_origem, logradouro, numero, complemento);
+        Paciente pac = new Paciente(nome, CPF, CNPJ, RG, genero, estado_civil, nome_mae, nome_pai, cor_pele, data_nascimento, UF_origem, logradouro, numero, complemento);
 	PacienteDAO dao = new PacienteDAO();	
 
                 try {
- 
-                    dao.criaPaciente(pedido);    //Cria o pedido
+                    dao.criaPaciente(pac);    
                 } catch (SQLException ex) {
                     System.out.println(ex);
                 }

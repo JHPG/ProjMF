@@ -10,11 +10,15 @@
 
         <h2>Menu Resumido</h2>
         <h3>Funcionario</h3>
-        Definir
-        <h3>Instituição</h3>
-        Definir
+        <a href="CadastraPaciente.jsp">Cadastrar de Paciente</a><br />
+        <a href="ConsHistoricoPaciente.jsp">Consultar Histórico de Pacientes</a><br />
+        <a href="TranferePaciente.jsp">Transferir Pacientes</a><br />
+        <a href="#">Cadastrar Instituição</a><br />
+        <a href="#">Editar Cadastro Funcionario</a><br />
+
         <h3>Paciente</h3>
-        Definir
+        <a href="#">Consultar Histórico Paciente</a><br />
+        <a href="#">Editar Cadastro Paciente</a><br />
         
         <hr>
         
@@ -43,7 +47,6 @@
            idPaciente integer not null primary key GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),   
            nome VARCHAR(50),     
            CPF VARCHAR(50),
-           CNPJ VARCHAR(100),
            RG VARCHAR(450),
            genero VARCHAR(450),  
            estado_civil VARCHAR(450),
