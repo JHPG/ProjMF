@@ -38,69 +38,43 @@
         <a href="#">Consultar Histórico Paciente</a><br />
         <a href="#">Editar Cadastro Paciente</a><br />
         
-        <!--
-        Script do banco
-        
-        drop table Paciente
-
-        CREATE TABLE Paciente(
-           idPaciente integer not null primary key GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),   
-           nome VARCHAR(50),     
-           CPF VARCHAR(50),
-           RG VARCHAR(450),
-           genero VARCHAR(450),  
-           estado_civil VARCHAR(450),
-           nome_mae VARCHAR(450),    
-           nome_pai VARCHAR(450),
-           cor_pele VARCHAR(450),
-           data_nascimento VARCHAR(450),
-           UF_origem VARCHAR(450),
-           logradouro VARCHAR(450),
-           numero VARCHAR(450),
-           complemento VARCHAR(450)
-  
-        );
-
-        select * from Paciente
-   
-        -->
-        
         <!-- Definicao de Tarefas 
+		
+		———————— TELAS ———————— 
+
+		-Telas paciente e funcionário
+		relatório Paciente
+		relatório de histórico
+		listagem de instituições
+
+		-telas só funcionário
+		incluir paciente   (também serve para atualizar/editar)
+		adicionar histórico
+		transferir paciente
+
+		——————————————————————— 
+
+
+		Funcionario = ONG?
+
+		-No banco
+		Administrador, instituição, funcionario
+		Incluir CPF
+
+		-Ignorar
+		Envio para aprovacao, definir permissoes
+
+		-Perfil
+		Funcionario e Paciente
+
+		-Classes
+		-Modelos
+		Paciente 
+		Instituicao
+		(Funcionario)
+		
+		
+		-->
         
-        ———————— TELAS ———————— 
-
-        -Telas paciente e funcionário
-        relatório Paciente
-        relatório de histórico
-        listagem de instituições
-
-        -telas só funcionário
-        incluir paciente   (também serve para atualizar/editar)
-        adicionar histórico
-        transferir paciente
-
-        ——————————————————————— 
-
-
-        Funcionario = ONG?
-
-        -No banco
-        Administrador, instituição, funcionario
-        Incluir CPF
-
-        -Ignorar
-        Envio para aprovacao, definir permissoes
-
-        -Perfil
-        Funcionario e Paciente
-
-        -Classes
-        -Modelos
-        Paciente 
-        Instituicao
-        (Funcionario)
-        
-        
-        -->
     </body>
 </html>
