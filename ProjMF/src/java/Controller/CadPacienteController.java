@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-public class PacienteController extends HttpServlet implements Command{
+public class CadPacienteController extends HttpServlet implements Command{
 
 	/**
 	 * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -48,15 +48,14 @@ public class PacienteController extends HttpServlet implements Command{
         String numero = (request.getParameter("numero"));
         String complemento = (request.getParameter("complemento"));
         
-        
         Paciente pac = new Paciente(nome, CPF, CNPJ, RG, genero, estado_civil, nome_mae, nome_pai, cor_pele, data_nascimento, UF_origem, logradouro, numero, complemento);
 	PacienteDAO dao = new PacienteDAO();	
 
-                try {
-                    dao.criaPaciente(pac);    
-                } catch (SQLException ex) {
-                    System.out.println(ex);
-                }
+        try {
+            dao.criaPaciente(pac);    
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        }
                 
         RequestDispatcher rd = request.getRequestDispatcher("/index.html");  
         rd.forward(request,response); 

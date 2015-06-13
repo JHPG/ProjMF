@@ -1,5 +1,9 @@
 <%-- 
 --%>
+<%@page import="DAO.*"%>
+<%@page import="Model.*"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -34,6 +38,13 @@
     </head>
 
     <body >
+        <%
+            //PacienteDAO dao = new PacienteDAO();
+            
+            //Vai vir do controller
+            List<Paciente> listaPacientes = (ArrayList) request.getAttribute("listaPacientes");
+            //Completar esse trecho depois
+        %>
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -87,28 +98,26 @@
                                         </div>    
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label for="NovaInstituicao" class="col-sm-1 control-label" title="NovaInstituicao"></label>
                                     <div class="col-sm-12">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Digite um nome">
+                                            <input type="text" name="nomePac" placeholder="Digite um nome" class="form-control">
+                                            <input type="hidden" name="acao" value="consHistPaciente">
                                             <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">Ir</button>
+                                                <button class="btn btn-primary" type="submit">Ir</button>
                                             </span>
                                         </div>   
                                     </div>    
                                 </div>
-
                             </div>
                         </div>
-                        
-                            <input type="hidden" name="acao" value="criarPaciente" class="btn btn-primary"> 
-                            <input type="submit" class="btn btn-primary" onclick=""> 
-                            <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
-                        </div>
+
+                        <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                     </form>
-                </div
+                </div>
+            </div>
             </div> 
         
         <!--<hr>-->

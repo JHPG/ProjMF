@@ -33,7 +33,9 @@ public class FrontController extends HttpServlet{
             Command command = null;
 
             if(acao.equals("criarPaciente")){
-                command = new PacienteController();
+                command = new CadPacienteController();
+            } else if(acao.equals("consHistPaciente")) {
+                command = new ConsHistPacienteController();
             }
 
             if(command != null){

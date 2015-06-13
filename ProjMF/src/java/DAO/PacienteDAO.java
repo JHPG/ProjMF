@@ -54,31 +54,29 @@ public class PacienteDAO extends DAO {
 
     }
     
-    public List<Paciente> listaPacientes() {
+    public List<Paciente> listaPacientes(String nome) {
 
      try {
 
-         List<Paciente> pacientes = new ArrayList<Paciente>();
+         List<Paciente> pacientes = new ArrayList<>();
 
-         String sql = "(Select * From paciente)";
+         String sql= "select * from Pacientes where LOWER(Nome) like LOWER(?) order by Preco DESC ";
          PreparedStatement stmt;
          stmt = conexao.prepareStatement(sql);
          
-         ResultSet rs = stmt.executeQuery();
+         stmt.setString(1, "%"+nome+"%");
+         
+         try (ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                 
+                Paciente pac = new Paciente();
+                pac.setIdPaciente(rs.getInt("idPaciente"));
+                pac.setNome(rs.getString("nome"));
+                pac.setCPF(rs.getString("CPF"));
 
-         while (rs.next()) {
-
-             Paciente pac = new Paciente();
-             pac.setIdPaciente(rs.getInt("idPaciente"));
-             pac.setNome(rs.getString("nome"));
-             pac.setCPF(rs.getString("CPF"));
-             
-             pacientes.add(pac);
-
+                pacientes.add(pac);
+            }
          }
-
-         rs.close();
-
          stmt.close();
 
          return pacientes;
