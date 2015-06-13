@@ -48,7 +48,8 @@ public class ConsHistPacienteController extends HttpServlet implements Command{
         String nomePac = request.getParameter("nomePac");
         
         List<Paciente> listaPacientes = (ArrayList) dao.listaPacientes(nomePac);
-                
+        request.setAttribute("listaPacientes", listaPacientes);
+        
         RequestDispatcher rd = request.getRequestDispatcher("/ConsHistoricoPaciente.jsp");  
         rd.forward(request,response);
         //session.setAttribute("flag",true);

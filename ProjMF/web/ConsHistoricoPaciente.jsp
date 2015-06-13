@@ -113,7 +113,39 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="row">
+                            <!--Tabela de histórico-->
+                            
+                            <%  //Gera a tabela com o histórico
+                                if(listaPacientes != null) { %>
+                                    <table>
+                                        <tr>
+                                            <th>Attr 1</th>
+                                            <th>Attr 2</th>
+                                        </tr>
+                                
+                                        <%
+                                        for(Paciente paciente: listaPacientes){  %>
+                                            
+                                            <tr>
+                                                <td><%=paciente.getCPF() %></td>
+                                                <td><%=paciente.getNome() %></td>
+                                            </tr>
+                                            
+                                        <%
+                                        }
+                                    %> </table> <%
+                                }
+            
+            
+            
+            
+                            %>
+                            
+                            
+                            
+                            
+                        </div>
                         <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                     </form>
                 </div>
@@ -129,6 +161,6 @@
     <script src="dist/js/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-    <!--reference: http://jsfiddle.net/zb4dc/2/-->
+    <!-- reference: http://jsfiddle.net/zb4dc/2/ -->
 </body>
 </html>
