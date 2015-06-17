@@ -91,7 +91,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="razao_social" class="col-sm-1 control-label" title="CPF"></label>
+                                    <label for="razao_social" class="col-sm-1 control-label" title="razao_social"></label>
                                     <div class="col-sm-12">
                                         <div class="input-group col-sm-8">
                                             <span class="input-group-addon" id="basic-addon2">Razao Social</span>
@@ -109,10 +109,10 @@
                                     </div>   
                                 </div>
                                 <div class="form-group">
-                                    <label for="infos_complementares" class="col-sm-1 control-label"></label>
+                                    <label for="infos_complementares" class="col-sm-1 control-label" title="infos complementares"></label>
                                     <div class="col-sm-12">
                                         <div class="input-group col-sm-8">
-                                            <span class="input-group-addon" id="basic-addon4">RG</span>
+                                            <span class="input-group-addon" id="basic-addon4">Info Comp</span>
                                             <input  id="infos_complementares" name="infos_complementares" type="text" class="form-control" aria-describedby="basic-addon4" >
                                         </div>
                                     </div>
