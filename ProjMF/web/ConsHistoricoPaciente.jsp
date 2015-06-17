@@ -118,7 +118,7 @@
                             
                             <%  //Gera a tabela com o histórico
                                 if(listaPacientes != null) { %>
-                                    <table>
+                                    <table class="table table-striped table-bordered table-bordered table-condensed table-responsive">
                                         <tr>
                                             <th>Attr 1</th>
                                             <th>Attr 2</th>
