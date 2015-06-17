@@ -2,56 +2,24 @@
 //Recriar no netbeans com o nome Instituicao
 //Remover este arquivo
 
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
-/**
- *
- * @author raphaelm
- */
-public class Paciente {
+public class Instituicao {
     private int idPaciente;
     private String nome;
-    private String CPF;
+    private String razao_social;
     private String CNPJ;
-    private String RG;
-    private String genero;
-    private String estado_civil;
-    private String nome_mae;
-    private String nome_pai;
-    private String cor_pele;
-    private String data_nascimento;
-    private String UF_origem;
-    private String logradouro;
-    private String numero;
-    private String complemento;
+    private String infos_complementares;
     
-    //Trocar nome Paciente por Individuo?
-    public Paciente(){
+    public Instituicao(){
     
     }
-    //OBS: esta tudo String para testar a primeira inserção
 
-    public Paciente(String nome, String CPF, String CNPJ, String RG, String genero, String estado_civil, String nome_mae, String nome_pai, String cor_pele, String data_nascimento, String UF_origem, String logradouro, String numero, String complemento) {
+    public Instituicao(String nome, private String razao_social, String CNPJ, String infos_complementares) {
         this.nome = nome;
-        this.CPF = CPF;
+        this.razao_social = razao_social;
         this.CNPJ = CNPJ;
-        this.RG = RG;
-        this.genero = genero;
-        this.estado_civil = estado_civil;
-        this.nome_mae = nome_mae;
-        this.nome_pai = nome_pai;
-        this.cor_pele = cor_pele;
-        this.data_nascimento = data_nascimento;
-        this.UF_origem = UF_origem;
-        this.logradouro = logradouro;
-        this.numero = numero;
-        this.complemento = complemento;
+        this.infos_complementares = infos_complementares;
     }
 
    //Getters
