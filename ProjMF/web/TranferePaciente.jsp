@@ -82,6 +82,7 @@
                                 <div class="form-group">
                                     <label for="Nome" class="col-sm-1 control-label" title="Nome" style=""></label>
                                     <div class="col-sm-12">
+                                        <p>Digite o nome do paciente a ser tranferido:</p>
                                         <div class="input-group col-sm-8">
                                             <span class="input-group-addon" id="basic-addon1">Nome</span>
                                             <input id="nome" name="nome" type="text" class="form-control" aria-describedby="basic-addon1"  />
@@ -90,14 +91,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <div class="input-group col-sm-8">
-                                            <span id="basic-addon2">Digite qual o nome da instituição que o paciente será tranferido:</span>
-                                        </div>    
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="NovaInstituicao" class="col-sm-1 control-label" title="NovaInstituicao"></label>
-                                    <div class="col-sm-12">
+                                        <p>Digite o nome da instituição que o paciente será tranferido:</p>
                                         <div class="input-group col-sm-8">
                                             <span class="input-group-addon" id="basic-addon2">Nova Instituicao:</span>
                                             <input id="NovaInstituicao" name="NovaInstituicao" type="text" class="form-control" aria-describedby="basic-addon2"  />
@@ -107,18 +101,18 @@
                                 
                             </div>
                         </div>
-                        <center style="margin:5% auto">
-                            <input type="hidden" name="acao" value="criarPaciente" class="btn btn-primary"> 
-                            <input type="submit" class="btn btn-primary" onclick=""> 
-                            <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
-                        </center>
+                        <div style="margin:5% auto">
+                            <input type="hidden" name="acao" value="transferirPaciente" class="btn btn-primary"> 
+                            <a href="index.html"><input type="button" value="Voltar" class="btn btn-default" onclick="window.history.back()"></a>
+                            <input type="submit" class="btn btn-primary" value="Confirmar">
+                        </div>
                     </form>
-                </div
+                </div>
                 </div> 
             </div>
             <!--<hr>-->
             <footer>
-                <p>&copy; MultiForm 2015 </p>
+                <center>&copy; MultiForm 2015 </center>
             </footer>
         </div>
 
