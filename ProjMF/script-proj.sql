@@ -1,6 +1,7 @@
+--Drop table Paciente
 
 CREATE TABLE Paciente(
-   idPaciente integer not null GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),   
+   IDPaciente integer not null GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),   
    nome VARCHAR(50),     
    CPF VARCHAR(50),
    RG VARCHAR(450),
@@ -13,20 +14,18 @@ CREATE TABLE Paciente(
    UF_origem VARCHAR(450),
    logradouro VARCHAR(450),
    numero VARCHAR(450),
-   complemento VARCHAR(450)
-  PRIMARY KEY(ID_Instituicao));
+   complemento VARCHAR(450),
+  PRIMARY KEY(IDPaciente));
 
-Select * from paciente;
+Select * from Paciente;
 
---drop table Instituicao
-
+--Drop table Instituicao
 CREATE TABLE Instituicao ( 
-ID_Instituicao INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1) , 
+IDInstituicao INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1) , 
 Nome VARCHAR (100) NOT NULL, 
 Razao_Social VARCHAR (100) NOT NULL, 
 CNPJ VARCHAR (14) NOT NULL, 
 Infos_Complementares VARCHAR (500), 
-PRIMARY KEY(ID_Instituicao));
+PRIMARY KEY(IDInstituicao));
 
 Select * from Instituicao;
-
