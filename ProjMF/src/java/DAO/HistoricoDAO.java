@@ -24,13 +24,20 @@ public class HistoricoDAO extends DAO{
             
         
         
-        
-        
-                    
-                    
+                
 //        } catch (SQLException e) {
 //            throw new RuntimeException(e);
 //        }
         return new ArrayList<>();
+    }
+
+    @Override
+    public void criaPaciente(Object o) throws SQLException {
+
+    }
+
+    @Override
+    public void criaInstituicao(Object o) throws SQLException {
+
     }
 }
