@@ -121,7 +121,7 @@
                                     <div class="col-sm-12">
                                         <div class="input-group col-sm-8">
                                             <span class="input-group-addon" id="basic-addon4">Genero</span>
-                                            <select class="form-control">
+                                            <select class="form-control" name="genero">
                                                 <option value="feminino">Feminino</option>
                                                 <option value="masculino">Masculino</option>
                                                 
@@ -135,7 +135,12 @@
                                 <div class="col-sm-12">
                                     <div class="input-group col-sm-8">
                                         <span class="input-group-addon" id="basic-addon6">Estado Civil</span>
-                                        <input id="estado-Civil" name="estado_civil" type="text" name="estado_civil" class="form-control"  aria-describedby="basic-addon6">
+                                        <select class="form-control" name="estado_civil">
+                                                <option value="solteiro">Solteiro</option>
+                                                <option value="casado">Casado</option>
+                                                <option value="divorciado">Divorciado</option>
+                                                <option value="viuvo">Viúvo</option>
+                                            </select>
                                     </div>
                                 </div>
                             </div>
@@ -182,7 +187,7 @@
                                 <div class="col-sm-12">
                                     <div class="input-group col-sm-8">
                                         <span class="input-group-addon" id="basic-addon8">UF de origem</span>
-                                        <input id="uf-origem" name="UF_origem" type="text" class="form-control"  aria-describedby="basic-addon11" >
+                                        <input id="uf-origem" name="UF_origem" type="text" class="form-control"  aria-describedby="basic-addon11" maxlength="2" >
                                     </div>
                                 </div>
                             </div>

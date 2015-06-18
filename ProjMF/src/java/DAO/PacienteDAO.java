@@ -23,7 +23,12 @@ public class PacienteDAO extends DAO {
         }
     }
 
-//    @Override
+    @Override
+    public void criaInstituicao(Object o) throws SQLException {
+        
+    }
+    
+    @Override
     public void criaPaciente(Object o) throws SQLException {
         Paciente pass = (Paciente) o;
 
@@ -49,11 +54,8 @@ public class PacienteDAO extends DAO {
         stmt.execute();
         stmt.close();
 
-
-
     }
 
-    
     public List<Paciente> listaPacientes(String nome) {
 
      try {
@@ -95,10 +97,7 @@ public class PacienteDAO extends DAO {
         
     }
 
-    @Override
-    public void criaInstituicao(Object o) throws SQLException {
-        
-    }
+    
     
 
 }
