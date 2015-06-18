@@ -70,7 +70,7 @@ public class PacienteDAO extends DAO {
          
          try (ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
-                 
+                
                 Paciente pac = new Paciente();
                 pac.setIdPaciente(rs.getInt("idPaciente"));
                 pac.setNome(rs.getString("nome"));
@@ -84,11 +84,8 @@ public class PacienteDAO extends DAO {
          return pacientes;
 
      } catch (SQLException e) {
-
          throw new RuntimeException(e);
-
      }
-
  }
 
     public void transferirPaciente(String cod, String novaInst) {

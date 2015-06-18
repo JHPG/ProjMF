@@ -42,7 +42,7 @@
             //PacienteDAO dao = new PacienteDAO();
             
             //Vai vir do controller
-            List<Historico> listaHistorico = (ArrayList) request.getAttribute("listaHistorico");
+            List<Historico> listaDiagnostico = (ArrayList) request.getAttribute("listaDiagnostico");
             //Completar esse trecho depois
         %>
 
@@ -89,7 +89,7 @@
         </div>
 
         <div class="container">
-            <h2>Consulta Histórico Paciente</h2>
+            <h2>Consulta de diagnóstico do paciente</h2>
             <div class="panel panel-default">
                 <div class="panel-heading">Consulta</div>
                 <div class="panel-body">
@@ -112,9 +112,9 @@
                                     <div class="col-sm-12">
                                         <div class="input-group">
                                             <input type="text" name="nomePac" placeholder="Digite um nome" class="form-control">
-                                            <input type="hidden" name="acao" value="consHistPaciente">
+                                            <input type="hidden" name="acao" value="consDiagPaciente">
                                             <span class="input-group-btn">
-                                                <button class="btn btn-primary" type="submit">Ir</button>
+                                                <button class="btn btn-primary" type="submit">Pesquisar</button>
                                             </span>
                                         </div>   
                                     </div>    
@@ -125,7 +125,7 @@
                             <!--Tabela de histórico-->
                             
                             <%  //Gera a tabela com o histórico
-                                if(listaHistorico != null) { %>
+                                if(listaDiagnostico != null) { %>
                                     <table class="table table-striped table-bordered table-bordered table-condensed table-responsive">
                                         <tr>
                                             <th>Attr 1</th>
@@ -133,7 +133,7 @@
                                         </tr>
                                 
                                         <%
-                                        for(Historico h: listaHistorico){  %>
+                                        for(Historico h: listaDiagnostico){  %>
                                             
                                             <tr>
                                                 <td><%//=h.getBla() %></td>

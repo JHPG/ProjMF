@@ -14,9 +14,9 @@ import java.util.List;
  *
  * @author Jhpg
  */
-public class HistoricoDAO extends DAO{
+public class DiagnosticoDAO extends DAO{
 
-    public List<Historico> listaHistorico(String nomePac) {
+    public List<Historico> listaDiagnostico(String nomePac) {
           
         List<Historico> listaHistorico = new ArrayList<>();
         

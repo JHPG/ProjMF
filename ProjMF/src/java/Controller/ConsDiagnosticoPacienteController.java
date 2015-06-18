@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Jhpg
  */
 
-public class ConsHistPacienteController extends HttpServlet implements Command{
+public class ConsDiagnosticoPacienteController extends HttpServlet implements Command{
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,14 +40,14 @@ public class ConsHistPacienteController extends HttpServlet implements Command{
         //HttpSession sessao = request.getSession(true);        
         //int idPaciente = Integer.parseInt(request.getParameter("idPaciente"));
         
-        HistoricoDAO dao = new HistoricoDAO();
+        DiagnosticoDAO dao = new DiagnosticoDAO();
                 
         String nomePac = request.getParameter("nomePac");
         
-        List<Historico> listaHistorico = (ArrayList) dao.listaHistorico(nomePac);
-        request.setAttribute("listaHistorico", listaHistorico);
+        List<Historico> listaDiagnostico = (ArrayList) dao.listaDiagnostico(nomePac);
+        request.setAttribute("listaDiagnostico", listaDiagnostico);
         
-        RequestDispatcher rd = request.getRequestDispatcher("/ConsHistoricoPaciente.jsp");  
+        RequestDispatcher rd = request.getRequestDispatcher("/ConsDiagnosticoPaciente.jsp");  
         rd.forward(request,response);
         //session.setAttribute("flag",true);
         

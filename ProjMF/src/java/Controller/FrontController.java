@@ -36,8 +36,8 @@ public class FrontController extends HttpServlet{
                 command = new CadPacienteController();
             } else if(acao.equals("criarInstituicao")) {
                 command = new CadInstituicaoController(); 
-            } else if(acao.equals("consHistPaciente")) {
-                command = new ConsHistPacienteController();
+            } else if(acao.equals("consDiagPaciente")) {
+                command = new ConsDiagnosticoPacienteController();
             } else if(acao.equals("transferirPaciente")) {
                 command = new TransferirPacienteController();
             }
