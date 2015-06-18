@@ -88,6 +88,13 @@ public class PacienteDAO extends DAO {
      }
 
  }
+
+    public void transferirPaciente(String cod, String novaInst) {
+        
+        // Preencher este método :D
+        
+        
+    }
     
 
 }

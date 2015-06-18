@@ -8,6 +8,10 @@
         <servlet-name>PacienteController</servlet-name>
         <servlet-class>Controller.PacienteController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TransferirPacienteController</servlet-name>
+        <servlet-class>Controller.TransferirPacienteController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FrontController</servlet-name>
         <url-pattern>/FrontController</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>PacienteController</servlet-name>
         <url-pattern>/PacienteController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TransferirPacienteController</servlet-name>
+        <url-pattern>/TransferirPacienteController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

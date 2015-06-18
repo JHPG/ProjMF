@@ -6,10 +6,7 @@
 package Controller;
 
 import DAO.PacienteDAO;
-import Model.Paciente;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Jhpg
  */
 
-public class ConsHistPacienteController extends HttpServlet implements Command{
+public class TransferirPacienteController extends HttpServlet implements Command{
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,22 +33,19 @@ public class ConsHistPacienteController extends HttpServlet implements Command{
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
+
+            PacienteDAO dao = new PacienteDAO();
+
+            String cod = request.getParameter("cod");
+            String novaInst = request.getParameter("novaInstituicao");
+
+            dao.transferirPaciente(cod, novaInst);
+
+            request.setAttribute("ok", "transferido");
+
+            RequestDispatcher rd = request.getRequestDispatcher("/TransferePaciente.jsp");  
+            rd.forward(request,response);
         
-        //HttpSession sessao = request.getSession(true);        
-        //int idPaciente = Integer.parseInt(request.getParameter("idPaciente"));
-        
-        PacienteDAO dao = new PacienteDAO();
-                
-        String nomePac = request.getParameter("nomePac");
-        
-        List<Paciente> listaPacientes = (ArrayList) dao.listaPacientes(nomePac);
-        request.setAttribute("listaPacientes", listaPacientes);
-        
-        RequestDispatcher rd = request.getRequestDispatcher("/ConsHistoricoPaciente.jsp");  
-        rd.forward(request,response);
-        //session.setAttribute("flag",true);
-        
-        //response.sendRedirect("index.html");
                 
         }
 
