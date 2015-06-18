@@ -5,8 +5,8 @@
  */
 package Controller;
 
-import DAO.PacienteDAO;
-import Model.Paciente;
+import Model.*;
+import DAO.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,12 +40,12 @@ public class ConsHistPacienteController extends HttpServlet implements Command{
         //HttpSession sessao = request.getSession(true);        
         //int idPaciente = Integer.parseInt(request.getParameter("idPaciente"));
         
-        PacienteDAO dao = new PacienteDAO();
+        HistoricoDAO dao = new HistoricoDAO();
                 
         String nomePac = request.getParameter("nomePac");
         
-        List<Paciente> listaPacientes = (ArrayList) dao.listaPacientes(nomePac);
-        request.setAttribute("listaPacientes", listaPacientes);
+        List<Historico> listaHistorico = (ArrayList) dao.listaHistorico(nomePac);
+        request.setAttribute("listaHistorico", listaHistorico);
         
         RequestDispatcher rd = request.getRequestDispatcher("/ConsHistoricoPaciente.jsp");  
         rd.forward(request,response);
