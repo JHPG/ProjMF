@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 public abstract class DAO {
     protected Connection conexao;
     
-    public abstract void criaPaciente(Object o)throws SQLException;
+//    public abstract void criaPaciente(Object o)throws SQLException;
 
     
 }

@@ -23,7 +23,7 @@ public class PacienteDAO extends DAO {
         }
     }
 
-    @Override
+//    @Override
     public void criaPaciente(Object o) throws SQLException {
         Paciente pass = (Paciente) o;
 
@@ -60,7 +60,7 @@ public class PacienteDAO extends DAO {
 
          List<Paciente> pacientes = new ArrayList<>();
 
-         String sql= "select * from Pacientes where LOWER(Nome) like LOWER(?) order by Preco DESC ";
+         String sql= "select * from Pacientes where LOWER(Nome) like LOWER(?) order by Nome ASC ";
          PreparedStatement stmt;
          stmt = conexao.prepareStatement(sql);
          
