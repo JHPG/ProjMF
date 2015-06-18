@@ -42,7 +42,7 @@
             //PacienteDAO dao = new PacienteDAO();
             
             //Vai vir do controller
-            List<Paciente> listaPacientes = (ArrayList) request.getAttribute("listaPacientes");
+            List<Historico> listaHistorico = (ArrayList) request.getAttribute("listaHistorico");
             //Completar esse trecho depois
         %>
 
@@ -117,7 +117,7 @@
                             <!--Tabela de histórico-->
                             
                             <%  //Gera a tabela com o histórico
-                                if(listaPacientes != null) { %>
+                                if(listaHistorico != null) { %>
                                     <table class="table table-striped table-bordered table-bordered table-condensed table-responsive">
                                         <tr>
                                             <th>Attr 1</th>
@@ -125,11 +125,11 @@
                                         </tr>
                                 
                                         <%
-                                        for(Paciente paciente: listaPacientes){  %>
+                                        for(Historico h: listaHistorico){  %>
                                             
                                             <tr>
-                                                <td><%=paciente.getCPF() %></td>
-                                                <td><%=paciente.getNome() %></td>
+                                                <td><%//=h.getBla() %></td>
+                                                <td><%//=h.getBla() %></td>
                                             </tr>
                                             
                                         <%
@@ -154,7 +154,7 @@
         
         <!--<hr>-->
         <footer>
-            <p>&copy; MultiForm 2015 </p>
+            <center><p>&copy; MultiForm 2015 </p></center>
         </footer>
     </div>
 
