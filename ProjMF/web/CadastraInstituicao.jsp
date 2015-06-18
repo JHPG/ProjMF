@@ -124,7 +124,7 @@
                 </div>
                 
                 <center style="margin:5% auto">
-                    <input type="hidden" name="acao" value="criarPaciente" class="btn btn-primary"> 
+                    <input type="hidden" name="acao" value="criarInstituicao" class="btn btn-primary"> 
                     <input type="submit" class="btn btn-primary" onclick=""> 
                     <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                 </center>

@@ -14,6 +14,5 @@ public abstract class DAO {
     protected Connection conexao;
     
     public abstract void criaPaciente(Object o)throws SQLException;
-
-    
+    public abstract void criaInstituicao(Object o)throws SQLException;
 }

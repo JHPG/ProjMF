@@ -9,6 +9,8 @@ package Model;
  *
  * @author raphaelm
  */
+
+/*Retirar cnpj*/
 public class Paciente {
     private int idPaciente;
     private String nome;
