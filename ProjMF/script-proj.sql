@@ -59,11 +59,21 @@ select * from diagnostico;
 
 --inserts
 
-insert into Instituicao (nome, razao_social, CNPJ, infos_complementares) Values('nomeinstituicao','121213123','4234324','sem informacao complementar');
+insert into Instituicao (nome, razao_social, CNPJ, infos_complementares) Values('ONG Teto','ONG TETO RIO DAS VELHAS','4234324','sem informacao complementar');
+insert into Instituicao (nome, razao_social, CNPJ, infos_complementares) Values('Clinica Reviver','CLINICA REVIVER CORPO E MENTE LTDA','9258924','sem informacao complementar');
+insert into Instituicao (nome, razao_social, CNPJ, infos_complementares) Values('Centro Paulo Silva',' CENTRO DE ED TEC PAUL0 SILVA','2261124','sem informacao complementar');
 
 insert into paciente (nome, CPF, CPF_resp, RG, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) 
-Values('a','123123123','2423423','2423490','solteiro','laria','jens','branca','28/03/10','sp','rua lames','100','sem compl');
+Values('Jose Lima','43130360852','2423423','568953256','solteiro','Laura Lima','Marcos Lima','negro','28/03/10','sp','Rua Rio Branco','502','sem compl');
+insert into paciente (nome, CPF, CPF_resp, RG, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) 
+Values('Maria Duarte','321123456','2423423','242349152','divorciada','Maria Bonita','Joao Duarte','branca','28/03/10','sp','Rua Lames','83','sem compl');
+insert into paciente (nome, CPF, CPF_resp, RG, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) 
+Values('Pedro Souza','123123123','2423423','2423490','viuvo','Silvia Souza','Rodrigo Souza','branca','28/03/10','sp','Rua da Balsa','100','sem compl');
 
+insert into diagnostico(IDPaciente, Diagnostico_Inicial, Vulnerabilidades, Objetivos, Resultados) 
+Values(1,'ta bem','drogas','sair das drogas','esta usando menos');
+insert into diagnostico(IDPaciente, Diagnostico_Inicial, Vulnerabilidades, Objetivos, Resultados) 
+Values(1,'ta bem','drogas','sair das drogas','esta usando menos');
 insert into diagnostico(IDPaciente, Diagnostico_Inicial, Vulnerabilidades, Objetivos, Resultados) 
 Values(1,'ta bem','drogas','sair das drogas','esta usando menos');
 
