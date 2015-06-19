@@ -3,17 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Controller;
 
+import DAO.PacienteDAO;
 import java.io.IOException;
-
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class FrontController extends HttpServlet{
+/**
+ *
+ * @author Jhpg
+ */
+
+public class LoginController extends HttpServlet implements Command{
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -24,33 +29,27 @@ public class FrontController extends HttpServlet{
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
-    public void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-       
-            String acao = request.getParameter("acao");
-            Command command = null;
+	@Override
+	public void execute(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");
 
-            if(acao.equals("criarPaciente")){
-                command = new CadPacienteController();
-            } else if(acao.equals("criarInstituicao")) {
-                command = new CadInstituicaoController(); 
-            } else if(acao.equals("consDiagPaciente")) {
-                command = new ConsDiagnosticoPacienteController();
-            } else if(acao.equals("transferirPaciente")) {
-                command = new TransferirPacienteController();
-            } else if(acao.equals("logar")) {
-                command = new LoginController();
+            String nome = request.getParameter("nome");
+            String senha = request.getParameter("senha");
+               
+            if(nome.equals("admin") && senha.equals("1234")){
+                RequestDispatcher rd = request.getRequestDispatcher("/menu.html");  
+                rd.forward(request,response);            
+            }else{
+                RequestDispatcher rd = request.getRequestDispatcher("/index.html");  
+                rd.forward(request,response);
             }
 
-            if(command != null){
-                command.execute(request, response);
-            } else {
-                throw new RuntimeException("Acao não implementada ainda");
-            }
+            
+        
+                
         }
-    
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -63,7 +62,7 @@ public class FrontController extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        execute(request, response);
     }
 
     /**
@@ -77,7 +76,7 @@ public class FrontController extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        execute(request, response);
     }
 
     /**
