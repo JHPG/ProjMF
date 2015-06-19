@@ -10,6 +10,7 @@ CREATE TABLE Paciente(
    IDPaciente integer not null GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),   
    nome VARCHAR(50),     
    CPF VARCHAR(50),
+   CPF_resp VARCHAR(50),
    RG VARCHAR(450),
    genero VARCHAR(450),  
    estado_civil VARCHAR(450),
@@ -24,7 +25,7 @@ CREATE TABLE Paciente(
   PRIMARY KEY(IDPaciente)
 );
 
-Select * from Paciente;
+
 
 --Drop table Instituicao
 CREATE TABLE Instituicao (
@@ -35,7 +36,7 @@ CNPJ VARCHAR (14) NOT NULL,
 Infos_Complementares VARCHAR (500), 
 PRIMARY KEY(IDInstituicao));
 
-Select * from Instituicao;
+
 
 
 
@@ -49,15 +50,19 @@ CREATE TABLE Diagnostico (
   PRIMARY KEY(IDDiagnostico),
   FOREIGN KEY(IDPaciente) REFERENCES Paciente(IDPaciente));
 
-select * from diagnostico;
 
+
+--selects
+Select * from Instituicao;
+Select * from Paciente;
+select * from diagnostico;
 
 --inserts
 
 insert into Instituicao (nome, razao_social, CNPJ, infos_complementares) Values('nomeinstituicao','121213123','4234324','sem informacao complementar');
 
-insert into paciente (nome, CPF, RG, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) 
-Values('a','123123123','2423423','solteiro','laria','jens','branca','28/03/10','sp','rua lames','100','sem compl');
+insert into paciente (nome, CPF, CPF_resp, RG, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) 
+Values('a','123123123','2423423','2423490','solteiro','laria','jens','branca','28/03/10','sp','rua lames','100','sem compl');
 
 insert into diagnostico(IDPaciente, Diagnostico_Inicial, Vulnerabilidades, Objetivos, Resultados) 
 Values(1,'ta bem','drogas','sair das drogas','esta usando menos');
