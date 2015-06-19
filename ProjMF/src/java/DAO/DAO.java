@@ -10,9 +10,16 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public abstract class DAO {
+public class DAO {
     protected Connection conexao;
     
-    public abstract void criaPaciente(Object o)throws SQLException;
-    public abstract void criaInstituicao(Object o)throws SQLException;
+    public DAO() {
+        try {
+            conexao = DriverManager.getConnection("jdbc:derby://localhost:1527/banco1", "root", "1234");
+        } catch (SQLException ex) {
+            
+        }
+    }
+    
+    
 }

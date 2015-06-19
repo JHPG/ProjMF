@@ -178,7 +178,7 @@
                                 <div class="col-sm-12">
                                     <div class="input-group col-sm-8">
                                         <span class="input-group-addon" id="basic-addon8">Data de nascimento</span>
-                                        <input id="data-nascimento" name="data_nascimento" type="text" class="form-control"  aria-describedby="basic-addon10" >
+                                        <input id="data-nascimento" name="data_nascimento" type="date" class="form-control"  aria-describedby="basic-addon10" >
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +222,7 @@
                 </div>
                 <center style="margin:5% auto">
                     <input type="hidden" name="acao" value="criarPaciente" class="btn btn-primary"> 
-                    <input type="submit" class="btn btn-primary" onclick="sucesso()"> 
+                    <input type="submit" value="Cadastrar" class="btn btn-primary" onclick="sucesso()"> 
                     <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                 </center>
                 </form>

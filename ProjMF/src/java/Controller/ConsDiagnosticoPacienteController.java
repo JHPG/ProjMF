@@ -8,8 +8,11 @@ package Controller;
 import Model.*;
 import DAO.*;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,23 +38,22 @@ public class ConsDiagnosticoPacienteController extends HttpServlet implements Co
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setContentType("text/html;charset=UTF-8");
-        
-        //HttpSession sessao = request.getSession(true);        
-        //int idPaciente = Integer.parseInt(request.getParameter("idPaciente"));
-        
-        DiagnosticoDAO dao = new DiagnosticoDAO();
+            try {
+                response.setContentType("text/html;charset=UTF-8");
                 
-        String nomePac = request.getParameter("nomePac");
-        
-        List<Historico> listaDiagnostico = (ArrayList) dao.listaDiagnostico(nomePac);
-        request.setAttribute("listaDiagnostico", listaDiagnostico);
-        
-        RequestDispatcher rd = request.getRequestDispatcher("/ConsDiagnosticoPaciente.jsp");  
-        rd.forward(request,response);
-        //session.setAttribute("flag",true);
-        
-        //response.sendRedirect("index.html");
+                DiagnosticoDAO dao = new DiagnosticoDAO();
+                
+                int codPac = Integer.parseInt(request.getParameter("codPac"));
+                
+                List<Diagnostico> listaDiagnostico = (ArrayList) dao.listaDiagnostico(codPac);
+                request.setAttribute("listaDiagnostico", listaDiagnostico);
+                
+                RequestDispatcher rd = request.getRequestDispatcher("/ConsDiagnosticoPaciente.jsp");
+                rd.forward(request,response);
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(ConsDiagnosticoPacienteController.class.getName()).log(Level.SEVERE, null, ex);
+            }
                 
         }
 

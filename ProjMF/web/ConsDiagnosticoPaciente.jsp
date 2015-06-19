@@ -42,7 +42,7 @@
             //PacienteDAO dao = new PacienteDAO();
             
             //Vai vir do controller
-            List<Historico> listaDiagnostico = (ArrayList) request.getAttribute("listaDiagnostico");
+            List<Diagnostico> listaDiagnostico = (ArrayList) request.getAttribute("listaDiagnostico");
             //Completar esse trecho depois
         %>
 
@@ -98,20 +98,11 @@
                         <div class="row">
 
                             <div class="col-md-6">
-
-                                <div class="form-group">
-                                    <div class="col-sm-12">
-                                        <div class="input-group col-sm-8">
-                                            <span id="basic-addon2">Digite o nome do Paciente:</span>
-                                        </div>    
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
+                                <div class="form-group" style="margin: 60px 0px">
                                     <label for="NovaInstituicao" class="col-sm-1 control-label" title="NovaInstituicao"></label>
                                     <div class="col-sm-12">
                                         <div class="input-group">
-                                            <input type="text" name="nomePac" placeholder="Digite um nome" class="form-control">
+                                            <input type="text" name="codPac" placeholder="Digite o código do paciente" class="form-control">
                                             <input type="hidden" name="acao" value="consDiagPaciente">
                                             <span class="input-group-btn">
                                                 <button class="btn btn-primary" type="submit">Pesquisar</button>
@@ -128,31 +119,27 @@
                                 if(listaDiagnostico != null) { %>
                                     <table class="table table-striped table-bordered table-bordered table-condensed table-responsive">
                                         <tr>
-                                            <th>Attr 1</th>
-                                            <th>Attr 2</th>
+                                            <th>Diagnóstico Inicial</th>
+                                            <th>Vulnerabilidades</th>
+                                            <th>Objetivos</th>
+                                            <th>Resultados</th>
                                         </tr>
                                 
                                         <%
-                                        for(Historico h: listaDiagnostico){  %>
+                                        for(Diagnostico h: listaDiagnostico){  %>
                                             
                                             <tr>
-                                                <td><%//=h.getBla() %></td>
-                                                <td><%//=h.getBla() %></td>
+                                                <td><%=h.getDiag_inicial().toString() %></td>
+                                                <td><%=h.getVulnerabilidades().toString() %></td>
+                                                <td><%=h.getObjetivos().toString() %></td>
+                                                <td><%=h.getResultados().toString() %></td>
                                             </tr>
                                             
                                         <%
                                         }
                                     %> </table> <%
                                 }
-            
-            
-            
-            
                             %>
-                            
-                            
-                            
-                            
                         </div>
                         <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                     </form>

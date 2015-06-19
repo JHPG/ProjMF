@@ -41,13 +41,11 @@ public class FrontController extends HttpServlet{
             } else if(acao.equals("transferirPaciente")) {
                 command = new TransferirPacienteController();
             }
-            
-            
 
             if(command != null){
-                    command.execute(request, response);
+                command.execute(request, response);
             } else {
-                    throw new RuntimeException("Acao não implementada ainda");
+                throw new RuntimeException("Acao não implementada ainda");
             }
         }
     

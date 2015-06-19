@@ -1,3 +1,9 @@
+
+-- Nome: banco1
+-- User: root
+-- Pass: 1234
+
+
 --Drop table Paciente
 
 CREATE TABLE Paciente(
@@ -15,12 +21,13 @@ CREATE TABLE Paciente(
    logradouro VARCHAR(450),
    numero VARCHAR(450),
    complemento VARCHAR(450),
-  PRIMARY KEY(IDPaciente));
+  PRIMARY KEY(IDPaciente)
+);
 
 Select * from Paciente;
 
 --Drop table Instituicao
-CREATE TABLE Instituicao ( 
+CREATE TABLE Instituicao (
 IDInstituicao INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1) , 
 Nome VARCHAR (100) NOT NULL, 
 Razao_Social VARCHAR (100) NOT NULL, 

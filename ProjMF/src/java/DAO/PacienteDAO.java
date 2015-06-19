@@ -15,20 +15,10 @@ import javafx.beans.property.ListProperty;
 
 public class PacienteDAO extends DAO {
 
-    public PacienteDAO() {
-        try {
-            conexao = DriverManager.getConnection("jdbc:derby://localhost:1527//banco1", "root", "1234");
-        } catch (SQLException ex) {
-            
-        }
-    }
-
-    @Override
     public void criaInstituicao(Object o) throws SQLException {
         
     }
     
-    @Override
     public void criaPaciente(Object o) throws SQLException {
         Paciente pass = (Paciente) o;
 

@@ -6,6 +6,9 @@
 package DAO;
 
 import Model.*;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,27 +19,44 @@ import java.util.List;
  */
 public class DiagnosticoDAO extends DAO{
 
-    public List<Historico> listaDiagnostico(String nomePac) {
+    public List<Diagnostico> listaDiagnostico(int codPac) throws SQLException {
           
-        List<Historico> listaHistorico = new ArrayList<>();
-        
-//        try { 
-            
-        
-        
-                
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-        return new ArrayList<>();
-    }
+        List<Diagnostico> listaHistorico = new ArrayList<>();
 
-    @Override
+         String sql= "select * from diagnostico where IDPaciente=? order by IDPaciente ASC ";
+         PreparedStatement stmt;
+         stmt = conexao.prepareStatement(sql);
+         
+         stmt.setInt(1, codPac);
+         
+        try (ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                
+                Diagnostico hist = new Diagnostico();
+                hist.setIDDiagnostico(rs.getInt("IdDiagnostico"));
+                hist.setDiag_inicial(rs.getString("Diagnostico_Inicial"));
+                hist.setObjetivos(rs.getString("Objetivos"));
+                hist.setResultados(rs.getString("Resultados"));
+                hist.setVulnerabilidades(rs.getString("Vulnerabilidades"));
+                hist.setIDPaciente(rs.getInt("IDPaciente"));
+                
+                listaHistorico.add(hist);
+            }
+            stmt.close();
+
+            return listaHistorico;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+     
+//        return listaHistorico;
+   }
+
     public void criaPaciente(Object o) throws SQLException {
 
     }
 
-    @Override
     public void criaInstituicao(Object o) throws SQLException {
 
     }
