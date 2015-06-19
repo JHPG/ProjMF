@@ -71,10 +71,10 @@ insert into paciente (nome, CPF, CPF_resp, RG, Estado_civil, Nome_mae, Nome_pai,
 Values('Pedro Souza','123123123','2423423','2423490','viuvo','Silvia Souza','Rodrigo Souza','branca','28/03/10','sp','Rua da Balsa','100','sem compl');
 
 insert into diagnostico(IDPaciente, Diagnostico_Inicial, Vulnerabilidades, Objetivos, Resultados) 
-Values(1,'ta bem','drogas','sair das drogas','esta usando menos');
+Values(1,'Editável por profissional avaliador','Paciente possui vicio em Crack, não possui endereço fixo, porém reside aos arredores da Av. alcantara machado e se encontra desempregado.','Reabilitação e inclusão social','Diminuição no uso de entorpecentes');
 insert into diagnostico(IDPaciente, Diagnostico_Inicial, Vulnerabilidades, Objetivos, Resultados) 
-Values(1,'ta bem','drogas','sair das drogas','esta usando menos');
+Values(2,'Editável por profissional avaliador','Paciente possui vicio em alcool em estado elevado e reside na casa dos pais','Tratar alcoolismo','Sem melhorias , devido ao tempo de tratamento');
 insert into diagnostico(IDPaciente, Diagnostico_Inicial, Vulnerabilidades, Objetivos, Resultados) 
-Values(1,'ta bem','drogas','sair das drogas','esta usando menos');
+Values(3, 'Editável por profissional avaliador','Exclusão social e sindrome do panico','Reinclusão social e tratamento psicologico','Leve melhora no quadro psicologico');
 
 
