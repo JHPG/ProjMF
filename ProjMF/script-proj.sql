@@ -24,7 +24,7 @@ CREATE TABLE Paciente(
   PRIMARY KEY(IDPaciente)
 );
 
-Select * from Paciente;
+
 
 --Drop table Instituicao
 CREATE TABLE Instituicao (
@@ -35,7 +35,7 @@ CNPJ VARCHAR (14) NOT NULL,
 Infos_Complementares VARCHAR (500), 
 PRIMARY KEY(IDInstituicao));
 
-Select * from Instituicao;
+
 
 
 
@@ -49,8 +49,12 @@ CREATE TABLE Diagnostico (
   PRIMARY KEY(IDDiagnostico),
   FOREIGN KEY(IDPaciente) REFERENCES Paciente(IDPaciente));
 
-select * from diagnostico;
 
+
+--selects
+Select * from Instituicao;
+Select * from Paciente;
+select * from diagnostico;
 
 --inserts
 
