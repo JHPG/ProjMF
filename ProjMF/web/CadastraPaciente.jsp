@@ -98,6 +98,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label for="CPF_resp" class="col-sm-1 control-label" title="CPF Responsável"></label>
+                                    <div class="col-sm-12">
+                                        <div class="input-group col-sm-8">
+                                            <span class="input-group-addon" id="basic-addon2">CPF Resp</span>
+                                            <input id="CPF" name="CPF_resp" type="text" class="form-control" aria-describedby="basic-addon2"  />
+                                        </div>    
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="RG" class="col-sm-1 control-label"></label>
                                     <div class="col-sm-12">
                                         <div class="input-group col-sm-8">
@@ -213,7 +222,7 @@
                 <center style="margin:5% auto">
                     <input type="hidden" name="acao" value="criarPaciente" class="btn btn-primary"> 
                     <input type="submit" value="Cadastrar" class="btn btn-primary" onclick="sucesso()"> 
-                    <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
+                    <a href="menu.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                 </center>
                 </form>
             </div

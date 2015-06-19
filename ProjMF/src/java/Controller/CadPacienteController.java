@@ -35,6 +35,7 @@ public class CadPacienteController extends HttpServlet implements Command{
         //int idPaciente = 0;
         String nome = request.getParameter("nome");
         String CPF =(request.getParameter("CPF"));
+        String CPF_resp =(request.getParameter("CPF_resp"));
         String RG = (request.getParameter("RG"));
         String genero = (request.getParameter("genero"));
         String estado_civil = (request.getParameter("estado_civil"));
@@ -47,7 +48,7 @@ public class CadPacienteController extends HttpServlet implements Command{
         String numero = (request.getParameter("numero"));
         String complemento = (request.getParameter("complemento"));
         
-        Paciente pac = new Paciente(nome, CPF, RG, genero, estado_civil, nome_mae, nome_pai, cor_pele, data_nascimento, UF_origem, logradouro, numero, complemento);
+        Paciente pac = new Paciente(nome, CPF, CPF_resp, RG, genero, estado_civil, nome_mae, nome_pai, cor_pele, data_nascimento, UF_origem, logradouro, numero, complemento);
 	PacienteDAO dao = new PacienteDAO();	
 
         try {
@@ -56,7 +57,7 @@ public class CadPacienteController extends HttpServlet implements Command{
             System.out.println(ex);
         }
                 
-        RequestDispatcher rd = request.getRequestDispatcher("/index.html");  
+        RequestDispatcher rd = request.getRequestDispatcher("/menu.html");  
         rd.forward(request,response); 
         //session.setAttribute("flag",true);
         

@@ -22,7 +22,7 @@ public class PacienteDAO extends DAO {
     public void criaPaciente(Object o) throws SQLException {
         Paciente pass = (Paciente) o;
 
-        String sql = "insert into paciente (nome, CPF, RG, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) Values(?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into paciente (nome, CPF, CPF_resp, RG, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) Values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement stmt;
         stmt = conexao.prepareStatement(sql);
 

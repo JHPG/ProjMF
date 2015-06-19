@@ -102,7 +102,7 @@
                         </div>
                         <div style="margin:5% auto">
                             <input type="hidden" name="acao" value="transferirPaciente" class="btn btn-primary"> 
-                            <a href="index.html"><input type="button" value="Voltar" class="btn btn-default" onclick="window.history.back()"></a>
+                            <a href="menu.html"><input type="button" value="Voltar" class="btn btn-default" onclick="window.history.back()"></a>
                             <input type="submit" class="btn btn-primary" value="Confirmar">
                         </div>
                     </form>

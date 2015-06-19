@@ -15,6 +15,7 @@ public class Paciente {
     private int idPaciente;
     private String nome;
     private String CPF;
+    private String CPF_resp;
     private String RG;
     private String genero;
     private String estado_civil;
@@ -31,12 +32,11 @@ public class Paciente {
     public Paciente(){
     
     }
-    //OBS: esta tudo String para testar a primeira inserção
-    //Alterar Strings para os formatos corretos
-    //Verificar se falta algum campo
-    public Paciente(String nome, String CPF, String RG, String genero, String estado_civil, String nome_mae, String nome_pai, String cor_pele, String data_nascimento, String UF_origem, String logradouro, String numero, String complemento) {
+
+    public Paciente(String nome, String CPF, String CPF_resp, String RG, String genero, String estado_civil, String nome_mae, String nome_pai, String cor_pele, String data_nascimento, String UF_origem, String logradouro, String numero, String complemento) {
         this.nome = nome;
         this.CPF = CPF;
+        this.CPF_resp = CPF_resp;
         this.RG = RG;
         this.genero = genero;
         this.estado_civil = estado_civil;
@@ -48,6 +48,16 @@ public class Paciente {
         this.logradouro = logradouro;
         this.numero = numero;
         this.complemento = complemento;
+    }
+    
+    
+
+    public String getCPF_resp() {
+        return CPF_resp;
+    }
+
+    public void setCPF_resp(String CPF_resp) {
+        this.CPF_resp = CPF_resp;
     }
 
     public int getIdPaciente() {

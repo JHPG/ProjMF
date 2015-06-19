@@ -130,7 +130,7 @@
                                 }
                             %>
                         </div>
-                        <a href="index.html"><input type="button" value="Voltar" class="btn btn-default"></a>
+                        <a href="menu.html"><input type="button" value="Voltar" class="btn btn-default"></a>
                     </form>
                 </div>
             </div>

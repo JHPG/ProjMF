@@ -48,7 +48,7 @@ public class CadInstituicaoController extends HttpServlet implements Command{
             System.out.println(ex);
         }
                 
-        RequestDispatcher rd = request.getRequestDispatcher("/index.html");  
+        RequestDispatcher rd = request.getRequestDispatcher("/menu.html");  
         rd.forward(request,response); 
                 
         }
