@@ -54,9 +54,10 @@ select * from diagnostico;
 
 --inserts
 
-insert into paciente (nome, CPF, RG, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) 
-Values('a','b','c','d','e','f','g','h','i','j','k','l');
+insert into Instituicao (nome, razao_social, CNPJ, infos_complementares) Values('nomeinstituicao','121213123','4234324','sem informacao complementar');
 
+insert into paciente (nome, CPF, RG, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) 
+Values('a','123123123','2423423','solteiro','laria','jens','branca','28/03/10','sp','rua lames','100','sem compl');
 
 insert into diagnostico(IDPaciente, Diagnostico_Inicial, Vulnerabilidades, Objetivos, Resultados) 
 Values(1,'ta bem','drogas','sair das drogas','esta usando menos');
