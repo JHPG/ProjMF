@@ -12,7 +12,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>MultiForm | Cadastro</title>
+        <title>MultiForm | Transferencia</title>
         <link href="dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="jumbotron.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
