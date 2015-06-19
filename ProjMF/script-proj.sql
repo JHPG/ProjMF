@@ -29,3 +29,29 @@ Infos_Complementares VARCHAR (500),
 PRIMARY KEY(IDInstituicao));
 
 Select * from Instituicao;
+
+
+
+CREATE TABLE Diagnostico (
+  IDDiagnostico INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+  IDPaciente INTEGER NOT NULL,
+  Diagnostico_Inicial VARCHAR (300) NOT NULL,
+  Vulnerabilidades VARCHAR (200) NOT NULL,
+  Objetivos VARCHAR (200) NOT NULL,
+  Resultados VARCHAR (300) NOT NULL,
+  PRIMARY KEY(IDDiagnostico),
+  FOREIGN KEY(IDPaciente) REFERENCES Paciente(IDPaciente));
+
+select * from diagnostico;
+
+
+--inserts
+
+insert into paciente (nome, CPF, RG, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) 
+Values('a','b','c','d','e','f','g','h','i','j','k','l');
+
+
+insert into diagnostico(IDPaciente, Diagnostico_Inicial, Vulnerabilidades, Objetivos, Resultados) 
+Values(1,'ta bem','drogas','sair das drogas','esta usando menos');
+
+
