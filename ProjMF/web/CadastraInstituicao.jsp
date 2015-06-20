@@ -53,7 +53,8 @@
                 <li class="active"><a href="CadastraInstituicao.jsp">Cadastrar Instituição</a></li>
                 <li><a href="CadastraPaciente.jsp">Cadastrar Paciente</a></li>
                 <li><a href="ConsDiagnosticoPaciente.jsp">Consultar Diagnóstico</a></li>
-                <li><a href="TransferePaciente.jsp">Transferir Paciente</a></li>
+                <!--<li><a href="TransferePaciente.jsp">Transferir Paciente</a></li>-->
+                <li><a href="ConsPaciente.jsp">Consultar Paciente</a></li>
               </ul>
             </div>
         </nav>

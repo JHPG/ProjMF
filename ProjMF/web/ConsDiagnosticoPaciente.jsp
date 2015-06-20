@@ -63,7 +63,8 @@
                 <li><a href="CadastraInstituicao.jsp">Cadastrar Instituição</a></li>
                 <li><a href="CadastraPaciente.jsp">Cadastrar Paciente</a></li>
                 <li class="active"><a href="ConsDiagnosticoPaciente.jsp">Consultar Diagnóstico</a></li>
-                <li><a href="TransferePaciente.jsp">Transferir Paciente</a></li>
+                <!--<li><a href="TransferePaciente.jsp">Transferir Paciente</a></li>-->
+                <li><a href="ConsPaciente.jsp">Consultar Paciente</a></li>
               </ul>
             </div>
         </nav>
@@ -137,9 +138,9 @@
             </div> 
         
         <!--<hr>-->
-        <footer>
-            <center><p>&copy; MultiForm 2015 </p></center>
-        </footer>
+        <center><footer>
+            <p>&copy; MultiForm 2015 </p>
+        </footer></center>
     </div>
 
     <script src="dist/js/jquery.min.js"></script>

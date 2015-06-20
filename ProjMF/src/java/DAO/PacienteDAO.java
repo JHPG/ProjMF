@@ -22,23 +22,25 @@ public class PacienteDAO extends DAO {
     public void criaPaciente(Object o) throws SQLException {
         Paciente pass = (Paciente) o;
 
-        String sql = "insert into paciente (nome, CPF, CPF_resp, RG, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) Values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into paciente (nome, CPF, CPF_resp, RG, genero, Estado_civil, Nome_mae, Nome_pai, Cor_pele, Data_nascimento, UF_origem, Logradouro, Numero, Complemento) Values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement stmt;
         stmt = conexao.prepareStatement(sql);
 
         //stmt.setInt(1, pass.getIdPaciente());
         stmt.setString(1, pass.getNome());
         stmt.setString(2, pass.getCPF());
-        stmt.setString(3, pass.getRG());
-        stmt.setString(4, pass.getEstado_civil());
-        stmt.setString(5, pass.getNome_mae());
-        stmt.setString(6, pass.getNome_pai());
-        stmt.setString(7, pass.getCor_pele());
-        stmt.setString(8, pass.getData_nascimento());
-        stmt.setString(9, pass.getUF_origem());
-        stmt.setString(10, pass.getLogradouro());
-        stmt.setString(11, pass.getNumero());
-        stmt.setString(12, pass.getComplemento());
+        stmt.setString(3, pass.getCPF_resp());
+        stmt.setString(4, pass.getRG());
+        stmt.setString(5, pass.getGenero());
+        stmt.setString(6, pass.getEstado_civil());
+        stmt.setString(7, pass.getNome_mae());
+        stmt.setString(8, pass.getNome_pai());
+        stmt.setString(9, pass.getCor_pele());
+        stmt.setString(10, pass.getData_nascimento());
+        stmt.setString(11, pass.getUF_origem());
+        stmt.setString(12, pass.getLogradouro());
+        stmt.setString(13, pass.getNumero());
+        stmt.setString(14, pass.getComplemento());
         
         stmt.execute();
         stmt.close();
