@@ -53,7 +53,7 @@ public class PacienteDAO extends DAO {
 
          List<Paciente> pacientes = new ArrayList<>();
 
-         String sql= "select * from Pacientes where LOWER(Nome) like LOWER(?) order by Nome ASC ";
+         String sql= "select * from Paciente where LOWER(Nome) like LOWER(?) order by Nome ASC ";
          PreparedStatement stmt;
          stmt = conexao.prepareStatement(sql);
          
