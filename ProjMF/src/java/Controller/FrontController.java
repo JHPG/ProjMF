@@ -42,6 +42,8 @@ public class FrontController extends HttpServlet{
                 command = new TransferirPacienteController();
             } else if(acao.equals("logar")) {
                 command = new LoginController();
+            } else if(acao.equals("consPaciente")) {
+                command = new ConsPacienteController();
             }
 
             if(command != null){
